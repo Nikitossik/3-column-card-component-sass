@@ -1,0 +1,137 @@
+@import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$ff-primary: 'Big Shoulders Display',
+cursive;
+$ff-secondary: 'Lexend Deca',
+sans-serif;
+$clr-bright-orange: hsl(31, 77%, 52%);
+$clr-dark-cyan: hsl(184, 100%, 22%);
+$clr-v-dark-cyan: hsl(179, 100%, 13%);
+$neu-tr-white: hsla(0, 0%, 100%, 0.75);
+$neu-v-light-gray: hsl(0, 0%, 95%);
+
+body {
+    font-family: $ff-secondary;
+    font-size: 1rem;
+    line-height: 1.67;
+    background-color: $neu-tr-white;
+}
+
+.cards {
+    padding: 1rem;
+    margin-inline: auto;
+    max-width: 22.5rem;
+
+    @media (min-width: 30rem) {
+        max-width: 32rem;
+    }
+
+    @media (min-width: 48rem) {
+        max-width: 50rem;
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 64rem) {
+        max-width: 59.5rem;
+    }
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 1.5rem;
+    line-height: 1.4;
+    font-size: 0.9375rem;
+    background-color: $neu-v-light-gray;
+    transition: 0.3s all ease;
+
+    @media (min-width: 64rem) {
+        .card &:hover {
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.card {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__icon {
+        width: 64px;
+        height: 40px;
+        margin-bottom: 2.1875rem;
+    }
+
+    &__title {
+        font-family: $ff-primary;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        color: $neu-v-light-gray;
+        margin-bottom: 1.5625rem;
+    }
+
+    &__text {
+        color: $neu-tr-white;
+        font-size: 0.9375rem;
+        margin-bottom: 1.5625rem;
+        flex: 1 1 auto;
+    }
+
+    &--sedans {
+        background-color: $clr-bright-orange;
+        border-radius: .5rem .5rem 0 0;
+
+        @media (min-width: 48rem) {
+            border-radius: .5rem 0 0 .5rem;
+        }
+
+        &>.btn {
+            color: $clr-bright-orange;
+        }
+    }
+
+    &--suvs {
+        background-color: $clr-dark-cyan;
+
+        &>.btn {
+            color: $clr-dark-cyan;
+        }
+    }
+
+    &--luxury {
+        background-color: $clr-v-dark-cyan;
+        border-radius: 0 0 .5rem .5rem;
+
+        @media (min-width: 48rem) {
+            border-radius: 0 .5rem .5rem 0;
+        }
+
+        &>.btn {
+            color: $clr-v-dark-cyan;
+        }
+    }
+
+    @media (min-width: 48rem) {
+        min-height: 31.25rem;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

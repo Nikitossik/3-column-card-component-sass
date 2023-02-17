@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+button,
+input,
+a {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  line-height: 1.67;
+  background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.cards {
+  padding: 1rem;
+  margin-inline: auto;
+  max-width: 22.5rem;
+}
+@media (min-width: 30rem) {
+  .cards {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 48rem) {
+  .cards {
+    max-width: 50rem;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .cards {
+    max-width: 59.5rem;
+  }
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 1.5rem;
+  line-height: 1.4;
+  font-size: 0.9375rem;
+  background-color: hsl(0, 0%, 95%);
+  transition: 0.3s all ease;
+}
+@media (min-width: 64rem) {
+  .card .btn:hover {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.card__icon {
+  width: 64px;
+  height: 40px;
+  margin-bottom: 2.1875rem;
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 1.5625rem;
+}
+.card__text {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.9375rem;
+  margin-bottom: 1.5625rem;
+  flex: 1 1 auto;
+}
+.card--sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+@media (min-width: 48rem) {
+  .card--sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+}
+.card--sedans > .btn {
+  color: hsl(31, 77%, 52%);
+}
+.card--suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.card--suvs > .btn {
+  color: hsl(184, 100%, 22%);
+}
+.card--luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+@media (min-width: 48rem) {
+  .card--luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+.card--luxury > .btn {
+  color: hsl(179, 100%, 13%);
+}
+@media (min-width: 48rem) {
+  .card {
+    min-height: 31.25rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
